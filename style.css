@@ -3,7 +3,12 @@ td {
 color: rgb(53, 43, 138)
 }
 
-.text-center, .card-header, .card-header, label {
+.card-header, .card-header, label {
   color: rgb(53, 43, 138);
 }
 
+.text-center {
+  color: rgb(53, 43, 138);
+  font-weight: 800;
+  font-size: 50pt;
+}
