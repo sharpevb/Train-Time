@@ -36,4 +36,28 @@ $("#add-train-btn").on("click", function (event) {
   console.log(newTrain.destination);
   console.log(newTrain.time);
   console.log(newTrain.frequency);
+
+  alert("Train added!");
+
+  $("#train-name-input").val("");
+  $("#des-input").val("");
+  $("#train-time").val("");
+  $("#train-rate").val("");
+});
+
+database.ref().on("child_added", function (childSnapshot) {
+  var trainName = childSnapshot.val().name;
+  var trainDes = childSnapshot.val().destination;
+  var trainTime = childSnapshot.val().time;
+  var trainRate = childSnapshot.val().frequency;
+
+  var newRow = $("<tr>").append(
+    $("<td>").text(trainName),
+    $("<td>").text(trainDes),
+    // $("<td>").text(empStartPretty),
+    $("<td>").text(trainTime),
+    $("<td>").text(trainRate),
+  );
+
+  $("#train-table > tbody").append(newRow);
 });

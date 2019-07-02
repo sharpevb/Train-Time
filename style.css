@@ -1,5 +1,9 @@
-#employee-table th,
+#train-table th, tr, 
 td {
-  display: inline-block;
-  width: 16.575%;
+color: rgb(53, 43, 138)
 }
+
+.text-center, .card-header, .card-header, label {
+  color: rgb(53, 43, 138);
+}
+
